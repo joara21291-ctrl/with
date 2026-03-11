@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GitHub Pages 검색 엔진 최적화(SEO)를 위한 메타 태그 -->
+    <meta name="description" content="전주 산업단지 기업 임직원을 위한 LG유플러스 체인지 페스티벌 랜딩페이지">
+    <meta property="og:title" content="LG유플러스 체인지 페스티벌 - 전주 산업단지">
+    <meta property="og:description" content="전주 산업단지의 새로운 시작을 유플러스가 함께 합니다.">
+    
+    <title>LG유플러스 체인지 페스티벌 - 전주 산업단지</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 아이콘 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        
+        /* LG유플러스 브랜드 컬러 정의 */
+        :root {
+            --uplus-magenta: #e1007e;
+            --uplus-dark: #1f1f1f;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #e1007e 0%, #a0005a 100%);
+        }
+        
+        .uplus-magenta { color: var(--uplus-magenta); }
+        .bg-uplus-magenta { background-color: var(--uplus-magenta); }
+        .border-uplus-magenta { border-color: var(--uplus-magenta); }
+        
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        
+        /* 스무스 스크롤 오프셋 (네비게이션 높이 고려) */
+        section { scroll-margin-top: 4rem; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- 1단계: 네비게이션 -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-black text-gray-900 italic tracking-tighter">LG U<span class="uplus-magenta">+</span></span>
+                </div>
+                <!-- 데스크탑 메뉴 -->
+                <div class="hidden md:flex space-x-8 font-bold text-gray-700">
+                    <a href="#intro" class="hover:text-uplus-magenta transition">축제소개</a>
+                    <a href="#program" class="hover:text-uplus-magenta transition">프로그램</a>
+                    <a href="#benefit" class="hover:text-uplus-magenta transition">핵심혜택</a>
+                    <a href="#apply" class="bg-uplus-magenta text-white px-6 py-2 rounded-full hover:shadow-lg transition">사전예약</a>
+                </div>
+                <!-- 모바일 메뉴 버튼 (기능은 JS로 구현 가능) -->
+                <div class="md:hidden">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <header id="intro" class="hero-gradient pt-32 pb-20 md:pt-48 md:pb-40 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center md:text-left">
+            <div class="md:w-3/4 lg:w-2/3">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-black/20 rounded-full text-sm font-bold mb-8 backdrop-blur-lg border border-white/10">
+                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                    2025 전주 산업단지 DX 프로젝트
+                </div>
+                <h1 class="text-4xl md:text-7xl font-black leading-tight mb-8 drop-shadow-md">
+                    전주 산업단지의 <br>새로운 시작을 <br>
+                    <span class="text-white">유플러스가 함께 합니다.</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-pink-100 mb-12 leading-relaxed font-light">
+                    기업의 가치를 높이는 스마트 솔루션부터 <br class="hidden md:block">
+                    임직원의 즐거움까지, <strong class="font-bold text-white underline underline-offset-8">체인지 페스티벌</strong>에서 만나보세요.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#apply" class="px-10 py-5 bg-white text-uplus-magenta font-black rounded-2xl text-lg shadow-2xl hover:bg-pink-50 transition transform hover:scale-105">
+                        지금 사전예약하기
+                    </a>
+                    <a href="#program" class="px-10 py-5 bg-transparent border-2 border-white/40 text-white font-black rounded-2xl text-lg hover:bg-white/10 transition">
+                        프로그램 자세히 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 배경 데코 (GitHub Pages에서 이미지 경로 문제 방지를 위해 아이콘 사용) -->
+        <div class="absolute right-[-5%] bottom-[-5%] opacity-10 w-1/3 hidden lg:block">
+            <i class="fa-solid fa-industry text-[500px]"></i>
+        </div>
+    </header>
+
+    <!-- 2단계: 가치 소개 -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black mb-6">왜 <span class="uplus-magenta italic">U+</span> 체인지 페스티벌인가요?</h2>
+                <div class="w-16 h-1.5 bg-uplus-magenta mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center card-hover shadow-sm">
+                    <div class="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i class="fa-solid fa-microchip text-3xl uplus-magenta"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">산업의 변화</h3>
+                    <p class="text-gray-600 leading-relaxed font-medium">전주 산단 맞춤형 스마트 팩토리 솔루션으로 업무의 질을 바꿉니다.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center card-hover shadow-sm">
+                    <div class="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i class="fa-solid fa-gift text-3xl uplus-magenta"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">복지의 변화</h3>
+                    <p class="text-gray-600 leading-relaxed font-medium">U+만의 차별화된 멤버십과 임직원 전용 혜택으로 일상을 바꿉니다.</p>
+                </div>
+                <div class="p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center card-hover shadow-sm">
+                    <div class="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i class="fa-solid fa-handshake text-3xl uplus-magenta"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">상생의 변화</h3>
+                    <p class="text-gray-600 leading-relaxed font-medium">기업과 임직원이 함께 웃는 지속 가능한 네트워크를 만듭니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3단계: 주요 프로그램 -->
+    <section id="program" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-black mb-3 text-gray-900">Festival Programs</h2>
+                    <p class="text-gray-500 text-lg">오직 전주 산단 가족분들을 위해 준비했습니다.</p>
+                </div>
+                <div class="bg-uplus-magenta/10 px-6 py-2 rounded-full">
+                    <span class="text-uplus-magenta font-black italic">LG U+ Only Benefit</span>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
+                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
+                        <i class="fa-solid fa-vr-cardboard text-6xl uplus-magenta group-hover:text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3">DX 미래기술 존</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">AI 관제와 클라우드 로봇 시스템 등 최첨단 기술 시연</p>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
+                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
+                        <i class="fa-solid fa-hot-tub-person text-6xl uplus-magenta group-hover:text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3">임직원 리프레시</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">바리스타 커피 및 스트레스 케어 상담소 운영</p>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
+                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
+                        <i class="fa-solid fa-coins text-6xl uplus-magenta group-hover:text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3">통신비 다이어트</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">기업 결합 상품을 통한 가계 통신비 절감 상담</p>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
+                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
+                        <i class="fa-solid fa-trophy text-6xl uplus-magenta group-hover:text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3">초대형 경품 추첨</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">총 5,000만원 상당의 경품 주인공을 찾습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4단계: 신뢰 기반 섹션 -->
+    <section id="benefit" class="py-24 bg-gray-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-black mb-8 leading-tight">
+                        전주 산업단지의 <br>
+                        성장을 주도하는 기술력
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-uplus-magenta rounded-full flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold mb-2">국내 최고 수준의 5G 특화망</h5>
+                                <p class="text-gray-400">안정적인 공장 자동화의 핵심 파트너</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-uplus-magenta rounded-full flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-bold mb-2">24시간 보안 관제 솔루션</h5>
+                                <p class="text-gray-400">AI 기반 실시간 침입 탐지 및 정보 보호</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[40px] p-10 text-gray-900 shadow-2xl relative">
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-uplus-magenta rounded-full flex items-center justify-center text-white font-black text-center text-sm rotate-12 shadow-xl">
+                        현장<br>계약특전
+                    </div>
+                    <h4 class="text-2xl font-black mb-8 italic">Change Benefit</h4>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between border-b pb-4">
+                            <span class="font-bold">신규 솔루션 도입</span>
+                            <span class="uplus-magenta font-black text-xl">최대 30% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b pb-4">
+                            <span class="font-bold">임직원 통신 결합</span>
+                            <span class="uplus-magenta font-black text-xl">매월 최대 할인</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b pb-4">
+                            <span class="font-bold">기업 전용 회선</span>
+                            <span class="uplus-magenta font-black text-xl">3개월 요금 면제</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5단계: 신청 폼 (CTA) -->
+    <section id="apply" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 italic">JOIN THE <span class="uplus-magenta">CHANGE</span></h2>
+                <p class="text-gray-500 font-bold">지금 사전 예약하고 현장 대기 없이 즐기세요!</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100">
+                <form id="applyForm" class="p-10 md:p-16 space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-sm font-black text-gray-700 ml-1">이름</label>
+                            <input required type="text" id="name" name="name" class="w-full px-5 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:border-uplus-magenta focus:bg-white outline-none transition" placeholder="홍길동">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-black text-gray-700 ml-1">휴대폰 번호</label>
+                            <input required type="tel" id="phone" name="phone" class="w-full px-5 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:border-uplus-magenta focus:bg-white outline-none transition" placeholder="010-0000-0000">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-black text-gray-700 ml-1">소속 회사명 (전주 산단 기업)</label>
+                        <input required type="text" id="company" name="company" class="w-full px-5 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:border-uplus-magenta focus:bg-white outline-none transition" placeholder="OO테크 / OO전자">
+                    </div>
+                    
+                    <div class="pt-6">
+                        <button type="submit" class="w-full py-5 bg-uplus-magenta text-white font-black text-2xl rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1">
+                            사전 예약 완료하기
+                        </button>
+                        <p class="text-center mt-6 text-sm text-gray-400 font-medium">
+                            <i class="fa-solid fa-lock mr-1"></i> 개인정보는 안내 문구 발송 후 즉시 파기됩니다.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-50 py-16 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <span class="text-3xl font-black text-gray-900 italic mb-4 block">LG U<span class="uplus-magenta">+</span></span>
+                    <p class="text-gray-500 text-sm font-medium">전주 산업단지 체인지 페스티벌 운영 사무국</p>
+                </div>
+                <div class="flex gap-6 text-gray-400 text-sm font-bold">
+                    <a href="#" class="hover:text-uplus-magenta transition">개인정보처리방침</a>
+                    <a href="#" class="hover:text-uplus-magenta transition">이용약관</a>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-200 text-center text-xs text-gray-400 font-medium">
+                Copyright © 2025 LG Uplus Corp. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 간단한 알림 스크립트 -->
+    <script>
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`${name}님, 사전 예약 신청이 완료되었습니다!`);
+        });
+    </script>
+</body>
+</html>
