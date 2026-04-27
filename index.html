@@ -3,304 +3,941 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- GitHub Pages 검색 엔진 최적화(SEO)를 위한 메타 태그 -->
-    <meta name="description" content="전주 산업단지 기업 임직원을 위한 LG유플러스 체인지 페스티벌 랜딩페이지">
-    <meta property="og:title" content="LG유플러스 체인지 페스티벌 - 전주 산업단지">
-    <meta property="og:description" content="전주 산업단지의 새로운 시작을 유플러스가 함께 합니다.">
-    
-    <title>LG유플러스 체인지 페스티벌 - 전주 산업단지</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>LG U+ 공식인증대리점 - 최신폰 상담센터</title>
+    <meta property="og:title" content="LG U+ 공식인증대리점 | 전국 최저가 보장">
+    <meta property="og:description" content="최대 지원금 + 사은품 증정 + 당일 배송 | 카톡 1:1 상담">
+    <meta property="og:image" content="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/미리보기.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome 아이콘 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
-        
-        /* LG유플러스 브랜드 컬러 정의 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
         :root {
-            --uplus-magenta: #e1007e;
-            --uplus-dark: #1f1f1f;
+            --uplus-magenta: #E6007E;
+            --uplus-black: #222222;
+            --light-gray: #F5F5F7;
+            --white: #FFFFFF;
+            --text-gray: #666666;
+            --black-button: #111111;
+            --primary-blue: #007aff;
+            --uplus-dark: #333333;
+            --bg-soft-gray: #F8F9FA;
         }
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #e1007e 0%, #a0005a 100%);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
         }
-        
-        .uplus-magenta { color: var(--uplus-magenta); }
-        .bg-uplus-magenta { background-color: var(--uplus-magenta); }
-        .border-uplus-magenta { border-color: var(--uplus-magenta); }
-        
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-        
-        /* 스무스 스크롤 오프셋 (네비게이션 높이 고려) */
-        section { scroll-margin-top: 4rem; }
+
+        body {
+            background-color: var(--white);
+            color: var(--uplus-black);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            padding-bottom: 70px;
+        }
+
+        /* 긴급 공지 배너 */
+        .notice-banner {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #c0003a, #E6007E, #c0003a);
+            background-size: 200% auto;
+            animation: bannerSlide 3s linear infinite;
+            color: #fff;
+            text-align: center;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 8px 20px;
+            z-index: 1100;
+            letter-spacing: -0.2px;
+        }
+        @keyframes bannerSlide {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        header {
+            position: fixed;
+            top: 36px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            z-index: 1000;
+            padding: 12px 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.1rem; font-weight: 800; color: var(--uplus-magenta); text-decoration: none; white-space: nowrap; }
+        nav { display: flex; gap: 15px; }
+        nav a { text-decoration: none; color: var(--uplus-black); font-weight: 500; font-size: 0.85rem; white-space: nowrap; }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 140px;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #fff 0%, #fff0f6 100%);
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; word-break: keep-all; }
+        .hero h1 span { color: var(--uplus-magenta); }
+        .hero p { font-size: 1.1rem; color: #444; margin-bottom: 30px; font-weight: 500; word-break: keep-all; }
+
+        .btn-main {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+            cursor: pointer;
+            background-color: var(--uplus-magenta);
+            color: white;
+        }
+        .btn-kakao-main {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            background-color: #FEE500;
+            color: #3C1E1E;
+            margin-top: 10px;
+        }
+
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        section h2 { font-size: 1.8rem; margin-bottom: 30px; }
+
+        /* Internet Section */
+        .internet-banner {
+            background: #ffffff;
+            border: 2px solid #f2f2f2;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            max-width: 1000px;
+            gap: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+        .internet-content h3 { font-size: 1.5rem; color: var(--uplus-black); margin-bottom: 10px; letter-spacing: -0.5px; }
+        .internet-content h3 span { color: var(--uplus-magenta); position: relative; }
+        .internet-content h3 span::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(230, 0, 126, 0.1);
+            z-index: -1;
+        }
+        .internet-content p { font-size: 1.1rem; color: #555; }
+        .internet-content p strong { color: var(--uplus-black); font-weight: 700; }
+        .btn-internet {
+            background-color: var(--uplus-black);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+        .btn-internet:hover { background-color: var(--uplus-magenta); transform: translateY(-2px); }
+
+        /* Benefits */
+        .benefit-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .benefit-item { padding: 20px; }
+        .benefit-item i { font-size: 2.5rem; color: var(--uplus-magenta); margin-bottom: 15px; }
+
+        /* Review Section */
+        .review-section {
+            padding-left: 0;
+            padding-right: 0;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .review-grid {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 0 20px 20px 20px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            text-align: left;
+            justify-content: center;
+        }
+        .review-grid::-webkit-scrollbar { display: none; }
+        .review-card {
+            flex: 0 0 300px;
+            scroll-snap-align: center;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .review-card img { width: 100%; height: auto; display: block; }
+
+        /* Status Section */
+        .status-container {
+            max-width: 480px;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            background: #fff;
+        }
+        .status-header { background: #333; color: #fff; padding: 12px; text-align: center; font-size: 14px; font-weight: 600; }
+        .status-list-wrapper { height: 300px; overflow: hidden; position: relative; }
+        .status-list { position: absolute; width: 100%; top: 0; left: 0; }
+        .status-item {
+            padding: 0 15px;
+            border-bottom: 1px solid #f8f8f8;
+            display: grid;
+            grid-template-columns: 55px 95px 1fr 65px 50px;
+            align-items: center;
+            font-size: 13px;
+            height: 60px;
+            box-sizing: border-box;
+            background: #fff;
+            gap: 5px;
+            text-align: left;
+        }
+        .status-item .model { color: var(--primary-blue); font-weight: 600; text-align: center; }
+        .status-item .time { color: #ff5252; font-weight: 600; text-align: right; }
+        .status-notice {
+            padding: 10px;
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+            background: #fcfcfc;
+            border-top: 1px solid #f5f5f5;
+            white-space: nowrap;
+            letter-spacing: -0.5px;
+        }
+
+        /* Store Section */
+        .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .store-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-decoration: none; color: inherit; text-align: left; border: 1px solid #f1f1f1; transition: 0.2s; }
+        .store-card:hover { transform: translateY(-5px); border-color: var(--uplus-magenta); }
+        .store-img { height: 180px; background: #eee center/cover no-repeat; }
+        .store-info { padding: 15px; }
+        .store-name { font-weight: 700; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; }
+        .store-name i { color: var(--uplus-magenta); margin-right: 6px; font-size: 14px; }
+        .store-link { color: var(--uplus-magenta); font-size: 0.85rem; font-weight: 600; }
+
+        /* Trust Banner */
+        .trust-banner {
+            background-color: var(--bg-soft-gray);
+            padding: 35px 25px;
+            border-radius: 16px;
+            margin: 20px auto 45px;
+            max-width: 850px;
+            border: 1px solid #E9ECEF;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .trust-banner h3 { color: #343a40; margin-bottom: 12px; font-size: 1.35rem; font-weight: 700; }
+        .trust-banner p { font-size: 1rem; color: #666; word-break: keep-all; line-height: 1.6; }
+        .trust-banner p strong { color: var(--uplus-magenta); font-weight: 600; }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Fixed Bottom Bar */
+        .fixed-bottom {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            display: flex;
+            z-index: 2000;
+            background: #fff;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-fixed {
+            flex: 1; padding: 18px 0; border: none;
+            text-decoration: none; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px; color: #fff;
+            cursor: pointer;
+        }
+        .btn-kakao-fixed { background-color: var(--uplus-magenta); }
+        .btn-call-fixed { background-color: var(--uplus-dark); border-left: 1px solid rgba(255,255,255,0.1); }
+        .btn-fixed i { margin-right: 8px; }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 3000;
+            align-items: center; justify-content: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: #fff; width: 100%; max-width: 360px;
+            border-radius: 20px; padding: 30px 20px;
+            position: relative; text-align: center;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        @keyframes modalFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .modal-close-x { position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 28px; color: #999; cursor: pointer; }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 18px 8px;
+            cursor: pointer;
+        }
+        .faq-item:first-child { border-top: 1px solid #eee; }
+        .faq-q {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--uplus-magenta);
+            flex-shrink: 0;
+            transition: transform 0.3s;
+            line-height: 1;
+        }
+        .faq-item.open .faq-q::after {
+            transform: rotate(45deg);
+        }
+        .faq-a {
+            display: none;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+            padding-left: 4px;
+            word-break: keep-all;
+        }
+        .faq-item.open .faq-a { display: block; }
+
+        /* 상품 카드 견적 버튼 */
+        .btn-card-consult {
+            display: block;
+            margin-top: 10px;
+            padding: 9px 0;
+            background-color: var(--uplus-magenta);
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn-card-consult:hover { background-color: #c0003a; transform: translateY(-1px); }
+
+        /* 카카오 플로팅 버튼 */
+        .kakao-float {
+            position: fixed;
+            bottom: 90px;
+            right: 18px;
+            width: 54px;
+            height: 54px;
+            background-color: #FEE500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            z-index: 1999;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .kakao-float:hover { transform: scale(1.1); }
+        .kakao-float img { width: 30px; height: 30px; }
+
+        /* Product Grid (모델 섹션) */
+        .badge-main { display: inline-block; padding: 4px 12px; background: var(--uplus-magenta); color: white; border-radius: 4px; font-size: 0.8rem; margin-bottom: 10px; }
+        .badge-yellow {
+            background-color: #fef01b;
+            color: #000;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .badge-cyan {
+            background-color: #81e6d9;
+            color: #000;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+        .product-card {
+            background-color: #f8f9fa;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.2s;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+
+        .tab-btn {
+            padding: 8px 20px;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        .tab-btn.active { background-color: #333; color: white; }
+        .tab-btn:not(.active) { background-color: #f3f4f6; color: #6b7280; }
+
+        .product-item { display: none; }
+        .product-item.visible { display: flex; }
+
+        @media (max-width: 768px) {
+            .notice-banner { font-size: 0.75rem; padding: 7px 10px; }
+            header { top: 34px; flex-direction: column; padding: 10px; height: auto; }
+            .logo { margin-bottom: 10px; font-size: 1rem; }
+            nav { width: 100%; justify-content: space-around; gap: 0; border-top: 1px solid #f5f5f5; padding-top: 8px; }
+            nav a { margin: 0; font-size: 0.75rem; }
+
+            .hero { margin-top: 130px; padding: 40px 20px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+
+            .internet-banner { flex-direction: column; text-align: center; padding: 25px 16px; border-radius: 20px; gap: 14px; }
+            .internet-content h3 { font-size: 1rem; line-height: 1.4; }
+            .internet-content p { font-size: 0.88rem; line-height: 1.5; }
+            .btn-internet { width: 100%; padding: 14px; font-size: 14px; }
+
+            .benefit-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 0;
+            }
+            .benefit-item {
+                background: #fff;
+                border-radius: 15px;
+                padding: 18px 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+            .benefit-item i { font-size: 1.8rem; margin-bottom: 8px; }
+            .benefit-item h4 { font-size: 0.9rem; }
+            .benefit-item p { font-size: 0.78rem; line-height: 1.4; }
+
+            .review-grid { justify-content: flex-start; }
+            .review-card { flex: 0 0 85%; }
+
+            .status-item { grid-template-columns: 50px 1fr 60px 45px; font-size: 12px; }
+            .status-item .phone { display: none; }
+
+            .trust-banner { padding: 25px 15px; margin: 10px 0 30px; }
+            .trust-banner h3 { font-size: 1.05rem; }
+            .trust-banner p { font-size: 0.82rem; line-height: 1.7; }
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-    <!-- 1단계: 네비게이션 -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl font-black text-gray-900 italic tracking-tighter">LG U<span class="uplus-magenta">+</span></span>
-                </div>
-                <!-- 데스크탑 메뉴 -->
-                <div class="hidden md:flex space-x-8 font-bold text-gray-700">
-                    <a href="#intro" class="hover:text-uplus-magenta transition">축제소개</a>
-                    <a href="#program" class="hover:text-uplus-magenta transition">프로그램</a>
-                    <a href="#benefit" class="hover:text-uplus-magenta transition">핵심혜택</a>
-                    <a href="#apply" class="bg-uplus-magenta text-white px-6 py-2 rounded-full hover:shadow-lg transition">사전예약</a>
-                </div>
-                <!-- 모바일 메뉴 버튼 (기능은 JS로 구현 가능) -->
-                <div class="md:hidden">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- 긴급 공지 배너 -->
+    <div class="notice-banner">
+        🔴 오늘 마감! S26 워치8 무료증정 재고 12개 남음 &nbsp;|&nbsp; 지금 바로 카톡 상담하세요!
+    </div>
 
-    <!-- 히어로 섹션 -->
-    <header id="intro" class="hero-gradient pt-32 pb-20 md:pt-48 md:pb-40 text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center md:text-left">
-            <div class="md:w-3/4 lg:w-2/3">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-black/20 rounded-full text-sm font-bold mb-8 backdrop-blur-lg border border-white/10">
-                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                    2025 전주 산업단지 DX 프로젝트
-                </div>
-                <h1 class="text-4xl md:text-7xl font-black leading-tight mb-8 drop-shadow-md">
-                    전주 산업단지의 <br>새로운 시작을 <br>
-                    <span class="text-white">유플러스가 함께 합니다.</span>
-                </h1>
-                <p class="text-lg md:text-2xl text-pink-100 mb-12 leading-relaxed font-light">
-                    기업의 가치를 높이는 스마트 솔루션부터 <br class="hidden md:block">
-                    임직원의 즐거움까지, <strong class="font-bold text-white underline underline-offset-8">체인지 페스티벌</strong>에서 만나보세요.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#apply" class="px-10 py-5 bg-white text-uplus-magenta font-black rounded-2xl text-lg shadow-2xl hover:bg-pink-50 transition transform hover:scale-105">
-                        지금 사전예약하기
-                    </a>
-                    <a href="#program" class="px-10 py-5 bg-transparent border-2 border-white/40 text-white font-black rounded-2xl text-lg hover:bg-white/10 transition">
-                        프로그램 자세히 보기
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 배경 데코 (GitHub Pages에서 이미지 경로 문제 방지를 위해 아이콘 사용) -->
-        <div class="absolute right-[-5%] bottom-[-5%] opacity-10 w-1/3 hidden lg:block">
-            <i class="fa-solid fa-industry text-[500px]"></i>
-        </div>
+    <header>
+        <a href="#" class="logo">LG U<sup>+</sup> 공식인증대리점</a>
+        <nav>
+            <a href="#models">모델소개</a>
+            <a href="#benefits">구매혜택</a>
+            <a href="#live-status">상담현황</a>
+        </nav>
     </header>
 
-    <!-- 2단계: 가치 소개 -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl font-black mb-6">왜 <span class="uplus-magenta italic">U+</span> 체인지 페스티벌인가요?</h2>
-                <div class="w-16 h-1.5 bg-uplus-magenta mx-auto rounded-full"></div>
+    <section class="hero">
+        <span class="badge-main">U+만의 단독 특별 지원금</span>
+        <h1>휴대폰, <span>당신이 원하는 방식으로</span></h1>
+        <p>전국 최저가 도전! 친절 상담 약속드립니다.</p>
+        <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-main"><i class="fa-solid fa-comment" style="margin-right:8px;"></i>지금 바로 견적 문의하기</a>
+        <p style="margin-top:16px; font-size:0.88rem; color:#E6007E; font-weight:600; letter-spacing:-0.3px;">
+            🔴 오늘 상담 시 추가 지원금 적용 · 재고 한정
+        </p>
+    </section>
+
+    <!-- ===== 실시간 인기 모델 섹션 (새 디자인) ===== -->
+    <section id="models" style="padding-bottom: 40px;">
+        <h2>🔥 실시간 인기 모델</h2>
+
+        <!-- 카테고리 탭 -->
+        <div style="display:flex; gap:8px; margin-bottom:24px; justify-content:center; flex-wrap:wrap;">
+            <button class="tab-btn active" onclick="filterProducts('all', this)">베스트</button>
+            <button class="tab-btn" onclick="filterProducts('galaxy', this)">갤럭시</button>
+            <button class="tab-btn" onclick="filterProducts('iphone', this)">아이폰</button>
+            <button class="tab-btn" onclick="filterProducts('kids', this)">키즈폰</button>
+        </div>
+
+        <!-- 상품 그리드 -->
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; max-width:700px; margin:0 auto;" id="product-grid">
+
+            <!-- 상품 1 - 갤럭시 S26 -->
+            <div class="product-item visible flex-col" data-category="galaxy">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/S26.avif" alt="Galaxy S26" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-yellow">워치8 무료증정</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">갤럭시 S26</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#ef4444; font-weight:700; font-size:1.1rem;">97%</span>
+                        <span style="font-weight:700; font-size:1.1rem;">34,000원</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center card-hover shadow-sm">
-                    <div class="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
-                        <i class="fa-solid fa-microchip text-3xl uplus-magenta"></i>
+
+            <!-- 상품 2 - 갤럭시 S26+ -->
+            <div class="product-item visible flex-col" data-category="galaxy">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/S26플러스.avif" alt="Galaxy S26 Plus" style="max-height:100%; object-fit:contain;">
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">산업의 변화</h3>
-                    <p class="text-gray-600 leading-relaxed font-medium">전주 산단 맞춤형 스마트 팩토리 솔루션으로 업무의 질을 바꿉니다.</p>
-                </div>
-                <div class="p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center card-hover shadow-sm">
-                    <div class="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
-                        <i class="fa-solid fa-gift text-3xl uplus-magenta"></i>
+                    <div style="margin-top:8px;">
+                        <span class="badge-yellow">워치8 무료증정</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">복지의 변화</h3>
-                    <p class="text-gray-600 leading-relaxed font-medium">U+만의 차별화된 멤버십과 임직원 전용 혜택으로 일상을 바꿉니다.</p>
                 </div>
-                <div class="p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center card-hover shadow-sm">
-                    <div class="w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-inner">
-                        <i class="fa-solid fa-handshake text-3xl uplus-magenta"></i>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">갤럭시 S26플러스</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#ef4444; font-weight:700; font-size:1.1rem;">84%</span>
+                        <span style="font-weight:700; font-size:1.1rem;">232,000원</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">상생의 변화</h3>
-                    <p class="text-gray-600 leading-relaxed font-medium">기업과 임직원이 함께 웃는 지속 가능한 네트워크를 만듭니다.</p>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
                 </div>
+            </div>
+
+            <!-- 상품 3 - 갤럭시 S26 Ultra -->
+            <div class="product-item visible flex-col" data-category="galaxy">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/S26울트라.avif" alt="Galaxy S26 Ultra" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-yellow">워치8 무료증정</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">갤럭시 S26울트라</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#ef4444; font-weight:700; font-size:1.1rem;">67%</span>
+                        <span style="font-weight:700; font-size:1.1rem;">577,400원</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 4 - Z플립7 -->
+            <div class="product-item visible flex-col" data-category="galaxy">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/Z플립7.avif" alt="Z Flip 7" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-yellow">워치8 무료증정</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">갤럭시 Z플립7</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#ef4444; font-weight:700; font-size:1.1rem;">88%</span>
+                        <span style="font-weight:700; font-size:1.1rem;">165,000원</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 5 - iPhone 17 -->
+            <div class="product-item visible flex-col" data-category="iphone">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/아이폰17.jpg" alt="iPhone 17" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-cyan">출시기념 특가</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">아이폰 17</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#E6007E; font-weight:700; font-size:0.85rem;">단독 지원금 적용중</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 6 - iPhone 17 Air -->
+            <div class="product-item visible flex-col" data-category="iphone">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/아이폰 air.jpg" alt="iPhone 17 Air" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-cyan">슬림 신모델</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">아이폰 17 Air</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#E6007E; font-weight:700; font-size:0.85rem;">단독 지원금 적용중</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 7 - iPhone 17 Pro -->
+            <div class="product-item visible flex-col" data-category="iphone">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/아이폰프로.png" alt="iPhone 17 Pro" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-cyan">72만원 미친할인</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">아이폰 17 Pro</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#E6007E; font-weight:700; font-size:0.85rem;">재고 우선 배정 상담</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 8 - iPhone 17 Pro Max -->
+            <div class="product-item visible flex-col" data-category="iphone">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/아이폰 Pro.jpg" alt="iPhone 17 Pro Max" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span style="background-color:#1a1a1a; color:#fff; font-weight:bold; padding:4px 12px; border-radius:8px; display:inline-block; font-size:0.85rem;">✨ 최상위 모델</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">아이폰 17 Pro Max</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#E6007E; font-weight:700; font-size:0.85rem;">재고 우선 배정 상담</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 9 - 갤럭시 Z폴드7 -->
+            <div class="product-item visible flex-col" data-category="galaxy">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/Z폴드7.avif" alt="Z Fold 7" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span class="badge-yellow">워치8 무료증정</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">갤럭시 Z폴드7</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#ef4444; font-weight:700; font-size:1.1rem;">단독특가</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 10 - 갤럭시 버디4 0원 -->
+            <div class="product-item visible flex-col" data-category="galaxy">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/버디4.avif" alt="Galaxy Buddy 4" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span style="background-color:#ff4d4d; color:#fff; font-weight:bold; padding:4px 12px; border-radius:8px; display:inline-block; font-size:0.85rem;">🔥 0원 특가</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">갤럭시 버디4</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px; flex-wrap:nowrap;">
+                        <span style="color:#ef4444; font-weight:700; font-size:0.75rem; text-decoration:line-through; opacity:0.5; white-space:nowrap;">출고가 399,300원</span>
+                        <span style="font-weight:800; font-size:1rem; color:#111; white-space:nowrap;">0원</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+            <!-- 상품 9 - 키즈폰 무너2 -->
+            <div class="product-item flex-col" data-category="kids">
+                <div class="product-card mb-3">
+                    <div style="display:flex; justify-content:center; align-items:center; height:160px;">
+                        <img src="https://raw.githubusercontent.com/joara21291-ctrl/withu/main/무너폰2.jpg" alt="무너2" style="max-height:100%; object-fit:contain;">
+                    </div>
+                    <div style="margin-top:8px;">
+                        <span style="background-color:#a78bfa; color:#fff; font-weight:bold; padding:4px 12px; border-radius:8px; display:inline-block; font-size:0.85rem;">👶 키즈 인기1위</span>
+                    </div>
+                </div>
+                <div style="padding:0 4px; text-align:left;">
+                    <h3 style="color:#555; font-size:0.9rem; font-weight:500;">무너2</h3>
+                    <div style="display:flex; align-items:baseline; gap:4px; margin-top:4px;">
+                        <span style="color:#E6007E; font-weight:700; font-size:0.85rem;">키즈 전용 요금제 상담</span>
+                    </div>
+                    <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-card-consult" target="_blank">💬 견적 문의</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===== 모델 섹션 끝 ===== -->
+
+    <section id="benefits" style="background-color: #fffafc;">
+        <h2>🎁 우리 매장만의 구매 혜택</h2>
+        <div class="benefit-list">
+            <div class="benefit-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h4>최대 지원금</h4>
+                <p>공시지원금 + 매장 자체<br>추가 할인 적용</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-gift"></i>
+                <h4>프리미엄 사은품</h4>
+                <p>충전기, 케이스 등<br>풀패키지 증정</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>당일 즉시 발송</h4>
+                <p>기다림 없는 빠른 택배로<br>집 앞까지 안전 배송</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fa-solid fa-user-shield"></i>
+                <h4>평생 관리 서비스</h4>
+                <p>주기적인 요금제 점검 및<br>최적의 컨설팅 유지</p>
             </div>
         </div>
     </section>
 
-    <!-- 3단계: 주요 프로그램 -->
-    <section id="program" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
-                <div class="text-center md:text-left">
-                    <h2 class="text-4xl font-black mb-3 text-gray-900">Festival Programs</h2>
-                    <p class="text-gray-500 text-lg">오직 전주 산단 가족분들을 위해 준비했습니다.</p>
-                </div>
-                <div class="bg-uplus-magenta/10 px-6 py-2 rounded-full">
-                    <span class="text-uplus-magenta font-black italic">LG U+ Only Benefit</span>
+    <section id="internet-guide" style="padding-top: 40px; padding-bottom: 20px;">
+        <div class="internet-banner">
+            <div class="internet-content">
+                <h3>📢 <span>오늘만 이 가격!</span> 인터넷 비밀 지원금 폭탄</h3>
+                <p>가입 즉시 <strong>현금 사은품 최대 지급</strong>, 지금 바로 확인하세요</p>
+            </div>
+            <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-internet" target="_blank">
+                혜택 확인하기 <i class="fa-solid fa-chevron-right" style="margin-left: 5px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="review-section" id="reviews">
+        <h2>⭐ 실제 고객 후기</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <img src="리뷰1.jpeg" alt="고객 리뷰 1" onerror="this.src='https://placehold.co/400x500?text=Review+1'">
+            </div>
+            <div class="review-card">
+                <img src="리뷰2.jpeg" alt="고객 리뷰 2" onerror="this.src='https://placehold.co/400x500?text=Review+2'">
+            </div>
+            <div class="review-card">
+                <img src="리뷰3.jpeg" alt="고객 리뷰 3" onerror="this.src='https://placehold.co/400x500?text=Review+3'">
+            </div>
+        </div>
+        <p style="font-size: 12px; color: #999; margin-top: 10px;">⬅ 옆으로 밀어서 더 많은 리뷰를 확인하세요 ➡</p>
+    </section>
+
+    <section class="status-section" id="live-status">
+        <h2 style="font-size: 1.5rem; margin-bottom: 20px;"><i class="fa-regular fa-clock"></i> 실시간 상담 신청 현황</h2>
+        <div class="status-container">
+            <div class="status-header">실시간 상담 신청 현황</div>
+            <div class="status-list-wrapper">
+                <div class="status-list" id="rolling-list">
+                    <div class="status-item"><span class="name">최*진</span><span class="phone">010-****-9921</span><span class="model">아이폰 17 Pro</span><span class="badge">방문예약</span><span class="time">방금 전</span></div>
+                    <div class="status-item"><span class="name">정*영</span><span class="phone">010-****-1234</span><span class="model">갤럭시 S26</span><span class="badge">상담예약</span><span class="time">1분전</span></div>
+                    <div class="status-item"><span class="name">최*현</span><span class="phone">010-****-0012</span><span class="model">갤럭시 S26+</span><span class="badge">상담예약</span><span class="time">3분전</span></div>
+                    <div class="status-item"><span class="name">최*아</span><span class="phone">010-****-7712</span><span class="model">갤럭시 S26+</span><span class="badge">기기변경</span><span class="time">5분전</span></div>
+                    <div class="status-item"><span class="name">조*우</span><span class="phone">010-****-3388</span><span class="model">아이폰 17</span><span class="badge">상담예약</span><span class="time">7분전</span></div>
                 </div>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
-                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
-                        <i class="fa-solid fa-vr-cardboard text-6xl uplus-magenta group-hover:text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="font-black text-xl mb-3">DX 미래기술 존</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">AI 관제와 클라우드 로봇 시스템 등 최첨단 기술 시연</p>
-                    </div>
-                </div>
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
-                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
-                        <i class="fa-solid fa-hot-tub-person text-6xl uplus-magenta group-hover:text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="font-black text-xl mb-3">임직원 리프레시</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">바리스타 커피 및 스트레스 케어 상담소 운영</p>
-                    </div>
-                </div>
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
-                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
-                        <i class="fa-solid fa-coins text-6xl uplus-magenta group-hover:text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="font-black text-xl mb-3">통신비 다이어트</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">기업 결합 상품을 통한 가계 통신비 절감 상담</p>
-                    </div>
-                </div>
-                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg card-hover border-b-4 border-transparent hover:border-uplus-magenta">
-                    <div class="h-44 bg-pink-50 flex items-center justify-center group-hover:bg-uplus-magenta transition-colors">
-                        <i class="fa-solid fa-trophy text-6xl uplus-magenta group-hover:text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="font-black text-xl mb-3">초대형 경품 추첨</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">총 5,000만원 상당의 경품 주인공을 찾습니다.</p>
-                    </div>
-                </div>
+            <div class="status-notice">
+                * 실시간 정보는 개인정보 보호를 위해 마스킹 처리되었습니다.
             </div>
         </div>
     </section>
 
-    <!-- 4단계: 신뢰 기반 섹션 -->
-    <section id="benefit" class="py-24 bg-gray-900 text-white overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-black mb-8 leading-tight">
-                        전주 산업단지의 <br>
-                        성장을 주도하는 기술력
-                    </h2>
-                    <div class="space-y-8">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-uplus-magenta rounded-full flex-shrink-0 flex items-center justify-center">
-                                <i class="fa-solid fa-check text-xl"></i>
-                            </div>
-                            <div>
-                                <h5 class="text-xl font-bold mb-2">국내 최고 수준의 5G 특화망</h5>
-                                <p class="text-gray-400">안정적인 공장 자동화의 핵심 파트너</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-uplus-magenta rounded-full flex-shrink-0 flex items-center justify-center">
-                                <i class="fa-solid fa-check text-xl"></i>
-                            </div>
-                            <div>
-                                <h5 class="text-xl font-bold mb-2">24시간 보안 관제 솔루션</h5>
-                                <p class="text-gray-400">AI 기반 실시간 침입 탐지 및 정보 보호</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-[40px] p-10 text-gray-900 shadow-2xl relative">
-                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-uplus-magenta rounded-full flex items-center justify-center text-white font-black text-center text-sm rotate-12 shadow-xl">
-                        현장<br>계약특전
-                    </div>
-                    <h4 class="text-2xl font-black mb-8 italic">Change Benefit</h4>
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <span class="font-bold">신규 솔루션 도입</span>
-                            <span class="uplus-magenta font-black text-xl">최대 30% OFF</span>
-                        </div>
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <span class="font-bold">임직원 통신 결합</span>
-                            <span class="uplus-magenta font-black text-xl">매월 최대 할인</span>
-                        </div>
-                        <div class="flex items-center justify-between border-b pb-4">
-                            <span class="font-bold">기업 전용 회선</span>
-                            <span class="uplus-magenta font-black text-xl">3개월 요금 면제</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- ===== FAQ 섹션 ===== -->
+    <section id="faq" style="background-color: #ffffff;">
+        <h2>❓ 자주 묻는 질문</h2>
+        <div style="max-width: 720px; margin: 0 auto; text-align: left;" id="faq-list">
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Q. 온라인으로 신청하면 어떻게 진행되나요?</div>
+                <div class="faq-a">카톡 상담 후 원하시는 기기·요금제·색상을 확인하고, 간단한 본인 인증 절차 후 당일 또는 익일 택배로 발송됩니다. 개통까지 평균 30분 이내 완료돼요.</div>
             </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Q. 공시지원금 vs 선택약정, 어떤 게 유리한가요?</div>
+                <div class="faq-a">사용 패턴과 요금제에 따라 달라집니다. 고가 요금제 사용 시 선택약정(25% 할인)이 유리한 경우가 많고, 중저가 요금제라면 공시지원금이 더 나을 수 있어요. 상담 시 최적 조건을 비교해서 안내해드립니다.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Q. 기존 번호를 그대로 유지할 수 있나요?</div>
+                <div class="faq-a">네, 번호이동·기기변경 모두 기존 번호 유지 가능합니다. 타 통신사에서 LG U+로 번호이동 시 추가 지원금이 적용되는 경우도 있으니 상담 시 꼭 말씀해 주세요.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Q. 고가 요금제 강제 가입이 있나요?</div>
+                <div class="faq-a">절대 없습니다. 고객님께 가장 유리한 요금제를 함께 찾아드리는 게 저희 원칙입니다. 필요 없는 부가서비스 가입도 강요하지 않아요.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Q. 사은품은 언제 받을 수 있나요?</div>
+                <div class="faq-a">기기와 함께 동봉하여 발송되거나, 개통 확인 후 별도 발송됩니다. 사은품 종류와 지급 시기는 상담 시 정확히 안내해드립니다.</div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Q. 할부 기간은 어떻게 선택하나요?</div>
+                <div class="faq-a">12개월 / 24개월 / 36개월 중 선택 가능합니다. 할부 기간이 길수록 월 부담은 줄어들지만 총 할부원금은 동일합니다. 상담 시 원하시는 조건으로 맞춰드립니다.</div>
+            </div>
+
         </div>
     </section>
+    <!-- ===== FAQ 섹션 끝 ===== -->
 
-    <!-- 5단계: 신청 폼 (CTA) -->
-    <section id="apply" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black mb-4 italic">JOIN THE <span class="uplus-magenta">CHANGE</span></h2>
-                <p class="text-gray-500 font-bold">지금 사전 예약하고 현장 대기 없이 즐기세요!</p>
-            </div>
-            
-            <div class="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100">
-                <form id="applyForm" class="p-10 md:p-16 space-y-8">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="space-y-2">
-                            <label class="text-sm font-black text-gray-700 ml-1">이름</label>
-                            <input required type="text" id="name" name="name" class="w-full px-5 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:border-uplus-magenta focus:bg-white outline-none transition" placeholder="홍길동">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-sm font-black text-gray-700 ml-1">휴대폰 번호</label>
-                            <input required type="tel" id="phone" name="phone" class="w-full px-5 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:border-uplus-magenta focus:bg-white outline-none transition" placeholder="010-0000-0000">
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-sm font-black text-gray-700 ml-1">소속 회사명 (전주 산단 기업)</label>
-                        <input required type="text" id="company" name="company" class="w-full px-5 py-4 rounded-2xl bg-gray-50 border-2 border-transparent focus:border-uplus-magenta focus:bg-white outline-none transition" placeholder="OO테크 / OO전자">
-                    </div>
-                    
-                    <div class="pt-6">
-                        <button type="submit" class="w-full py-5 bg-uplus-magenta text-white font-black text-2xl rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1">
-                            사전 예약 완료하기
-                        </button>
-                        <p class="text-center mt-6 text-sm text-gray-400 font-medium">
-                            <i class="fa-solid fa-lock mr-1"></i> 개인정보는 안내 문구 발송 후 즉시 파기됩니다.
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- 푸터 -->
-    <footer class="bg-gray-50 py-16 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="text-center md:text-left">
-                    <span class="text-3xl font-black text-gray-900 italic mb-4 block">LG U<span class="uplus-magenta">+</span></span>
-                    <p class="text-gray-500 text-sm font-medium">전주 산업단지 체인지 페스티벌 운영 사무국</p>
-                </div>
-                <div class="flex gap-6 text-gray-400 text-sm font-bold">
-                    <a href="#" class="hover:text-uplus-magenta transition">개인정보처리방침</a>
-                    <a href="#" class="hover:text-uplus-magenta transition">이용약관</a>
-                </div>
-            </div>
-            <div class="mt-12 pt-8 border-t border-gray-200 text-center text-xs text-gray-400 font-medium">
-                Copyright © 2025 LG Uplus Corp. All Rights Reserved.
-            </div>
-        </div>
+
+    <footer>
+        <p>상호명: LG U+ 공식인증대리점 | 전국 무료 택배 배송 전문</p>
+        <p>© LG U+ Partner. All rights reserved.</p>
     </footer>
 
-    <!-- 간단한 알림 스크립트 -->
+    <!-- 카카오 플로팅 버튼 -->
+    <a href="https://open.kakao.com/o/sdWqcMOg" class="kakao-float" target="_blank" title="카카오 상담">
+        <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" alt="카카오 상담">
+    </a>
+
+    <div class="fixed-bottom">
+        <a href="https://open.kakao.com/o/sdWqcMOg" class="btn-fixed btn-kakao-fixed">
+            <i class="fa-solid fa-comment"></i> 카톡 상담하기
+        </a>
+        <button type="button" class="btn-fixed btn-call-fixed" onclick="openModal()">
+            <i class="fa-solid fa-phone"></i> 전화 문의하기
+        </button>
+    </div>
+
+    <div id="callModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-x" onclick="closeModal()">×</button>
+            <div style="font-size: 18px; font-weight: 700; margin-bottom: 12px; word-break: keep-all;">잠깐! 확인해 주세요</div>
+            <p style="color:#666; font-size:14px; margin-bottom:20px; line-height: 1.5; word-break: keep-all;">감사하게도 주문이 많아 전화 연결이 어려워요.<br>최대 혜택으로 빠른 가입을 원하신다면,<br>카톡 상담하기로 특가 혜택 바로 받아보세요!</p>
+            <div style="display: flex; gap: 10px;">
+                <a href="tel:01080804635" style="flex:1; padding:15px; border-radius:12px; border:1px solid #ddd; background:#fff; font-weight: 600; text-decoration: none; color: inherit; display: flex; align-items: center; justify-content: center; font-size: 15px;">전화 연결</a>
+                <a href="https://open.kakao.com/o/sdWqcMOg" style="flex:1.5; padding:15px; border-radius:12px; background:#FEE500; color:#3C1E1E; text-decoration:none; font-weight:700; display: flex; align-items: center; justify-content: center; font-size: 15px;" target="_blank">카톡 상담</a>
+            </div>
+        </div>
+    </div>
+
     <script>
-        document.getElementById('applyForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            alert(`${name}님, 사전 예약 신청이 완료되었습니다!`);
-        });
+        // FAQ 토글
+        function toggleFaq(el) {
+            const isOpen = el.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) el.classList.add('open');
+        }
+
+        // 모달
+        function openModal() {
+            document.getElementById('callModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('callModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('callModal');
+            if (event.target == modal) closeModal();
+        }
+
+        // 상품 필터 탭
+        function filterProducts(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.product-item').forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.classList.add('visible');
+                } else {
+                    item.classList.remove('visible');
+                }
+            });
+        }
+
+        // 실시간 상담 롤링
+        window.onload = function() {
+            window.scrollTo(0, 0);
+            const list = document.getElementById('rolling-list');
+            const itemHeight = 60;
+            let items = list.getElementsByClassName('status-item');
+            const cloneCount = items.length;
+
+            if (items.length > 0) {
+                for (let i = 0; i < cloneCount; i++) {
+                    list.appendChild(items[i].cloneNode(true));
+                }
+                let currentIndex = 0;
+                setInterval(() => {
+                    currentIndex++;
+                    list.style.transition = "top 0.6s ease-in-out";
+                    list.style.top = -(currentIndex * itemHeight) + "px";
+                    if (currentIndex >= cloneCount) {
+                        setTimeout(() => {
+                            list.style.transition = "none";
+                            list.style.top = "0px";
+                            currentIndex = 0;
+                        }, 600);
+                    }
+                }, 2500);
+            }
+        };
     </script>
+
 </body>
 </html>
